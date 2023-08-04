@@ -1,9 +1,11 @@
 import sqlite3
 
+# Função para realizar um depósito em uma conta
 def depositar():
     conta = int(input("Número da conta (ID do usuário): "))
     valor = float(input("Valor a ser depositado: "))
 
+    # Conecta ao banco de dados
     conn = sqlite3.connect('tabeladeclientes.db')
     cursor = conn.cursor()
 

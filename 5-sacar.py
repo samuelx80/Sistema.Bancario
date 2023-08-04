@@ -1,9 +1,11 @@
 import sqlite3
 
+# Função para realizar um saque de uma conta
 def sacar():
     conta = int(input("Número da conta (ID do usuário): "))
     valor = float(input("Valor a ser sacado: "))
 
+ # Conecta ao banco de dados
     conn = sqlite3.connect('tabeladeclientes.db')
     cursor = conn.cursor()
 
@@ -28,3 +30,4 @@ def sacar():
         print("Conta não encontrada.")
 
     conn.close()
+ # Fecha a conexão com o banco de dados

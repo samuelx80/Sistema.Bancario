@@ -1,8 +1,9 @@
 import sqlite3
 
+# Função principal do programa
 def main():
     criar_tabelas()
-
+ # Cria as tabelas se não existirem
     while True:
         print("\n--- Menu ---")
         print("1. Criar conta")

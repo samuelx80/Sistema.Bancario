@@ -1,11 +1,14 @@
 import sqlite3
 
+
+# Função para criar uma nova conta no sistema
 def criar_conta():
     nome = input("Nome completo: ")
     email = input("Email: ")
     rg = input("RG: ")
     senha = input("Digite a senha: ")
-
+    
+    #Conecta ao banco de dados
     conn = sqlite3.connect('tabeladeclientes.db')
     cursor = conn.cursor()
 
